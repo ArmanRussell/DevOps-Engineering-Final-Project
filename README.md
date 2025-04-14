@@ -1,0 +1,41 @@
+GitHub Repository: DevOps-Engineering-Final-Project
+Git Repo Link: https://github.com/ArmanRussell/DevOps-Engineering-Final-Project
+
+# Activity 1: Launch Amazon Linux EC2 Instance and Set Up Apache Web Server
+Steps taken:
+- Logged into AWS Console
+- Launched EC2 instance with Amazon Linux 2 AMI
+- Connected using SSH
+- Installed Apache using: sudo yum install httpd -y
+- Started Apache: sudo systemctl start httpd
+- Enabled service: sudo systemctl enable httpd
+
+Result:
+- Apache successfully installed and served test page on public IP.
+
+# Activity 2: Launch Windows Server 2022 EC2 Instance and Set Up IIS
+Steps taken:
+- Launched a Windows Server 2022 EC2 instance
+- Connected using RDP
+- Installed IIS via Server Manager
+
+Result:
+- Default IIS page displayed successfully.
+
+# Activity 3: Launch Two EC2 Instances and Create Application Load Balancer
+Steps taken:
+- Launched two EC2 instances with Amazon Linux 2 AMI
+- Connected to both instances using SSH
+- Installed Apache using: sudo yum install httpd -y
+- Started Apache: sudo systemctl start httpd
+- Enabled service: sudo systemctl enable httpd
+- Modified the default Apache web page on each instance to display a unique welcome message (e.g., “Hello from Server 1” and - -“Hello from Server 2”)
+- Created an Application Load Balancer (ALB) from AWS EC2 Console
+- Configured it as internet-facing on port 80
+- Created a target group and registered both EC2 instances
+- Tested the ALB by accessing its DNS name in the browser
+- Observed alternating responses (round-robin) when refreshing the page
+- Deleted the EC2 instances, target group, and load balancer after testing
+Result: 
+- Application Load Balancer successfully routed traffic between the two EC2 instances
+Verified round-robin behavior with alternating responses from each instance via browser
